@@ -38,10 +38,8 @@ The following preprocessing steps were applied:
 
 - Converting images to tensors
 - Normalization using:
-  
-```python
-transforms.Normalize((0.1307,), (0.3081,))
-Splitting dataset into:
+
+  Splitting dataset into:
 Training Set
 Validation Set
 Testing Set
@@ -108,3 +106,12 @@ Batch Normalization
 Used to improve training stability and convergence speed.
 
 Project Structure
+How to Run the Project
+1. Clone the Repository
+git clone https://github.com/your-username/your-repository-name.git
+2. Navigate to Project Folder
+cd your-repository-name
+3. Install Required Libraries
+pip install torch torchvision matplotlib numpy
+4. Run the Notebook or Python File
+python main.py
