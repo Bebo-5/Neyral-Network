@@ -1,89 +1,98 @@
 # Handwritten Digit Recognition using MLP Neural Network
 
-## Project Description
-This project implements a Multilayer Perceptron (MLP) Neural Network for handwritten digit recognition using the MNIST dataset.  
-The project was developed using PyTorch and includes data preprocessing, model training, evaluation, experimentation, and visualization.
-
-The objective of the project is to classify handwritten digits (0–9) with high accuracy using deep learning techniques.
+## Overview
+This project implements a Multilayer Perceptron (MLP) Neural Network using PyTorch to classify handwritten digits from the MNIST dataset.  
+The project includes data preprocessing, model training, evaluation, experimentation, and visualization of results.
 
 ---
 
-## Dataset
-The project uses the MNIST dataset:
+# Dataset
 
-- Dataset Name: MNIST Handwritten Digits
-- Number of Classes: 10
-- Image Size: 28x28 grayscale images
+Dataset: MNIST Handwritten Digits Dataset
+
+- 70,000 grayscale images
+- Image size: 28 × 28 pixels
+- 10 classes (digits from 0 to 9)
 
 Dataset Link:  
 https://pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html
 
-The dataset is automatically downloaded using torchvision.
+---
+
+# Features
+
+- Data preprocessing and normalization
+- Training / Validation / Testing split
+- Multilayer Perceptron (MLP) implementation
+- Multiple experiments for comparison
+- Accuracy and loss tracking
+- Visualization of training results
+- Dropout and Batch Normalization support
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Python
 - PyTorch
+- Torchvision
 - NumPy
 - Matplotlib
-- Torchvision
 
 ---
 
-## Data Preprocessing
+# Data Preprocessing
 
 The following preprocessing steps were applied:
 
 - Converting images to tensors
 - Normalization using:
-  
+
+```python id="b1t5d2"
+transforms.Normalize((0.1307,), (0.3081,))
 Splitting dataset into:
-Training Set
-Validation Set
-Testing Set
+Training set
+Validation set
+Testing set
 Model Architecture
 
-The implemented model is a Multilayer Perceptron (MLP) consisting of:
+The implemented model is a Multilayer Perceptron (MLP) containing:
 
 Input Layer:
-784 neurons (28×28 image flattened)
+784 neurons
 Hidden Layers:
-Experiment 1: [128, 64]
-Experiment 2: [512, 256]
+Configurable hidden layers
 Output Layer:
-10 neurons (digits 0–9)
-Activation Function
+10 neurons
+Activation Functions
 ReLU
+Tanh
+Sigmoid
 Loss Function
 CrossEntropyLoss
 Optimizer
 Adam Optimizer
 Experiments
-
-Two experiments were conducted to compare model performance.
-
 Experiment 1 (Baseline)
-Hidden Layers: [128, 64]
-Learning Rate: 0.001
-Dropout: No
-Batch Normalization: No
+Parameter	Value
+Hidden Layers	[128, 64]
+Learning Rate	0.001
+Dropout	No
+Batch Normalization	No
 Experiment 2 (Enhanced)
-Hidden Layers: [512, 256]
-Learning Rate: 0.0005
-Dropout: Yes
-Batch Normalization: Yes
+Parameter	Value
+Hidden Layers	[512, 256]
+Learning Rate	0.0005
+Dropout	Yes
+Batch Normalization	Yes
 Results
-Experiment	Test Accuracy	Final Loss
+Experiment	Accuracy	Final Loss
 Experiment 1	97.67%	0.1002
 Experiment 2	98.27%	0.0584
 Best Model
 
-Experiment 2 achieved the best performance with:
+Experiment 2 achieved the best performance.
 
-Accuracy: 98.27%
-Loss: 0.0584
 Visualizations
 
 The project includes:
@@ -91,11 +100,11 @@ The project includes:
 Training vs Validation Loss Curves
 Training vs Validation Accuracy Curves
 
-These visualizations help monitor model performance during training.
+These visualizations help analyze model learning performance.
 
 Regularization Techniques
 
-The following enhancement techniques were used:
+The following techniques were used:
 
 Dropout
 
@@ -103,6 +112,6 @@ Used to reduce overfitting.
 
 Batch Normalization
 
-Used to improve training stability and convergence speed.
+Used to improve training stability and model convergence.
 
 Project Structure
