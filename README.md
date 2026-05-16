@@ -108,12 +108,3 @@ Batch Normalization
 Used to improve training stability and convergence speed.
 
 Project Structure
-How to Run the Project
-1. Clone the Repository
-[git clone https://github.com/your-username/your-repository-name.git
-](https://github.com/Bebo-5/Neyral-Network)2. Navigate to Project Folder
-cd your-repository-name
-3. Install Required Libraries
-pip install torch torchvision matplotlib numpy
-4. Run the Notebook or Python File
-python main.py
